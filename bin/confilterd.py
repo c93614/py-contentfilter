@@ -34,7 +34,7 @@ class Daemon:
             if pid > 0:
                 sys.exit(0)
         except OSError,e:
-            sys.stderr.write("fork #1 fialed. %d (%s)\n" % (e.errno,\
+            sys.stderr.write("fork #1 failed. %d (%s)\n" % (e.errno,\
                 e.strerror))
             sys.exit(1)
 
@@ -45,10 +45,6 @@ class Daemon:
 
         # Perform second fork
         try:
-            pid = os.fork()
-            if pid > 0:
-                sys.exit()
-        except OSError,e:
             pid = os.fork()
             if pid > 0:
                 sys.exit()
