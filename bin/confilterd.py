@@ -123,7 +123,7 @@ class Daemon:
 
     def _run(self):
         '''
-        You should override thie method when you subclass Daemon. it will be
+        You should override this method when you subclass Daemon. it will be
         called after the Process has been daemonized by start() or restart()
         '''
 
@@ -153,7 +153,7 @@ if __name__ == "__main__":
             print "Confilter Service restart"
             daemon.restart()
         else:
-            print "Unkown command, valid param: start/stop/restart"
+            print "Unknown command, valid param: start/stop/restart"
             sys.exit(2)
     else:
         print "usage: %s start|stop|restart" % sys.argv[0]
